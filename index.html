@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEIA ESSE BILHETE!!!</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="icon" href="./assets/coracao.png">
+</head>
+
+<body onload="tocarMusica('audio')">
+
+    <audio id="backgroundMusic">
+        <source src="assets/George Michael - Careless Whisper (Official Video).mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+
+    <div class="container">
+        <div id="text"></div>
+
+        <div class="image-container">
+            <!-- Substitua aqui com a URL da nova imagem para a esquerda -->
+            <img id="left-image" src="./assets/vivi2.jpg" alt="Imagem Esquerda">
+            <div id="envolpe_img"></div>
+            <!-- Substitua aqui com a URL da nova imagem para a direita -->
+            <img id="right-image" src="./assets/vivi3.jpg" alt="Imagem Direita">
+        </div>
+
+        <button id="button" class="coracao">&#10084;</button>
+        <div id="dialog"></div>
+    </div>
+    <script src="assets/script.js"></script>
+
+    <script>
+        function tocarMusica(nomeArquivo) {
+            const audio = document.getElementById("backgroundMusic");
+            audio.src = `assets/${nomeArquivo}.mp3`;
+            audio.play();
+        }
+    </script>
+</body>
+
+</html>
