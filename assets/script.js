@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
         noButton.addEventListener("click", openDialog);
         yesButton.addEventListener("click", function (e) {
             if (e.target === yesButton) {
-                dialogBox.style.display = "none";
+                window.location.href = "https://api.whatsapp.com/send?phone=5517981117587&text=aceito%20namorar%20contigo%20pra%20sempre%2C%20meu%20gatinho!%20%F0%9F%92%8D"; 
             }
         });
     }
