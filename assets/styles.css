@@ -10,8 +10,9 @@
     }
 }
 
+/*propriedade do body completo */
 body {
-    background-image: url('./vivi.jpg');
+    background-image: url('./images/vivi.jpg');
     background-size: cover; /* para cobrir todo o corpo */
     background-position: center; /* para centralizar a imagem */
     display: flex;
@@ -22,26 +23,29 @@ body {
     margin: 0;
 }
 
-
+/*propriedade do texto*/
 #text {
     font-size: 20px;
     font-weight: bold;
     color: white;
 }
 
+/*propriedade do tamanho do envelope*/
 #envolpe_img img {
     width: 20rem;
     height: 20rem;
 }
 
+/*propriedade das imagens laterais*/
 #left-image,
 #right-image {
     width: 15rem; /* ajuste conforme necessário */
     height: auto; /* ajuste conforme necessário */
-    animation: blink 1s infinite;
+    animation: blink 6s infinite;
     position: absolute;
 }
 
+/*ajuste da imagem esquerda*/
 #left-image {
     position: absolute;
     left: 5rem; /* ajuste conforme necessário */
@@ -49,6 +53,7 @@ body {
     z-index: 0;
 }
 
+/*ajuste da imagem da direita*/
 #right-image {
     position: absolute;
     right: 5rem; /* ajuste conforme necessário */
@@ -57,25 +62,7 @@ body {
 
 }
 
-@media only screen and (max-width: 414px) {
-    /* Ajustes para iPhone 11 */
-    .image-container {
-        flex-direction: column; /* Alteração para colocar as imagens abaixo do envelope */
-        align-items: center;
-    }
-
-    #left-image,
-    #right-image {
-        width: 3rem;
-        margin-top: 20rem; /* Espaçamento entre o envelope e as imagens */
-    }
-    #left-image,
-    #right-image {
-        width: 5rem; /* Aumento da largura das imagens */
-        height: auto; /* Mantém a proporção */
-    }
-}
-
+/*ajuste do botao*/
 #button {
     background-color: transparent;
     border: none;
@@ -83,6 +70,7 @@ body {
     color: white;
 }
 
+/*propriedade da caixa de dialogo*/
 .dialog {
     display: none;
     position: fixed;
@@ -95,6 +83,7 @@ body {
     box-shadow:0px 2px 2px rgba(0, 0, 0.8, 0.8);
 }
 
+/*tamanho do coracao*/
 .coracao{
     font-size: 2rem;
 }
@@ -139,3 +128,92 @@ body {
     display: flex;
     justify-content: space-between;
 }
+
+
+
+/* Para dispositivos com largura máxima de 1200px */
+@media only screen and (max-width: 1200px) {
+    /* Reduzir o tamanho das imagens do envelope */
+    #left-image,
+    #right-image {
+        width: 12rem;
+    }
+}
+
+/* Para dispositivos com largura máxima de 992px */
+@media only screen and (max-width: 992px) {
+    /* Ajustar o tamanho das imagens */
+    #left-image,
+    #right-image {
+        width: 10rem;
+    }
+}
+
+/* Para dispositivos com largura máxima de 870px */
+@media only screen and (max-width: 870px) {
+    /* Reduzir o tamanho das imagens do envelope */
+    #left-image,
+    #right-image {
+        width: 8rem;
+    }
+}
+
+/* Para dispositivos com largura máxima de 600px */
+@media only screen and (max-width: 600px) {
+    /* Ajustar o tamanho das imagens */
+    #left-image,
+    #right-image {
+        width: 6rem;
+    }
+}
+
+/* Para dispositivos com largura máxima de 500px */
+@media only screen and (max-width: 500px) {
+    /* Reduzir o tamanho das imagens do envelope */
+    #left-image,
+    #right-image {
+        width: 5rem;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    /* Ajustes para iPhone 11 */
+    .image-container {
+        flex-direction: column; /* Alteração para colocar as imagens abaixo do envelope */
+        align-items: center;
+    }
+
+    #left-image,
+    #right-image {
+        width: 3rem;
+        margin-top: 20rem; /* Espaçamento entre o envelope e as imagens */
+        margin-left: 10rem;
+        margin-right: 10rem;
+    }
+
+    /*tamanho da imagem no celular*/
+    #left-image,
+    #right-image {
+        width: 7rem; /* Aumento da largura das imagens */
+        height: auto; /* Mantém a proporção */
+    }
+
+    /*adicionando espaçamento entre os botoes sim e nao*/
+    .buttons button {
+        margin: 0 5px; 
+    }
+}
+
+/* Para dispositivos com largura máxima de 395px */
+@media only screen and (max-width: 395px) {
+    /* Ajustar o tamanho das imagens */
+    #left-image,
+    #right-image {
+        width: 4rem;
+    }
+    /* Aumentar o espaçamento entre os botões */
+    .buttons button {
+        margin: 0 8px;
+    }
+}
+
